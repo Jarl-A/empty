@@ -151,7 +151,7 @@ body {
     top: 228px;
     left: 50%;
     margin-left: -2.4px;
-    margin-top: -60px;
+    margin-top: -80px;
     width: 5px;
     height: 35px;
     transform: translateY(-300px);
@@ -249,7 +249,7 @@ body {
 
 .text h1 {
     font-size: 2.7em;
-    font-weight: 700;
+    font-weight: 600;
     margin: 0.2em 0;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     background: linear-gradient(135deg, #2e4edc, #5d1b9f);
@@ -405,5 +405,6 @@ body {
     transition: width 0.1s linear;
 
 }
+
 
 
