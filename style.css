@@ -151,12 +151,12 @@ body {
     top: 228px;
     left: 50%;
     margin-left: -2.4px;
-    margin-top: -150px;
+    margin-top: -100px;
     width: 5px;
     height: 35px;
     transform: translateY(-300px);
     backface-visibility: hidden;
-    animation: in 500ms 10s ease-out forwards;
+    animation: in 500ms 8s ease-out forwards;
 }
 
 .cake:after,
@@ -405,6 +405,7 @@ body {
     transition: width 0.1s linear;
 
 }
+
 
 
 
