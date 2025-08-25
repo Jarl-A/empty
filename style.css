@@ -1,0 +1,457 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css);
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    scrollbar-width: none;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-image: linear-gradient(0deg,
+            rgb(102, 126, 234) 23.8%,
+            rgb(118, 75, 162) 92%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+/* طبقة النجوم الشفافة فوق الخلفية وتحت المحتوى */
+#stars {
+    position: fixed;
+    inset: 0;
+    /* top/right/bottom/left: 0 */
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* نضمن أن المحتوى فوق النجوم */
+.page {
+    position: relative;
+    z-index: 1;
+}
+
+/* Subtle floating particles with professional colors */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(148, 163, 184, 0.4);
+    border-radius: 50%;
+    animation: float 12s infinite linear;
+}
+
+
+.particle:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.particle:nth-child(3) {
+    left: 30%;
+    animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+    left: 40%;
+    animation-delay: 6s;
+}
+
+.particle:nth-child(5) {
+    left: 50%;
+    animation-delay: 8s;
+}
+
+.particle:nth-child(6) {
+    left: 60%;
+    animation-delay: 3s;
+}
+
+.particle:nth-child(7) {
+    left: 70%;
+    animation-delay: 5s;
+}
+
+.particle:nth-child(8) {
+    left: 80%;
+    animation-delay: 7s;
+}
+
+.particle:nth-child(9) {
+    left: 90%;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.6;
+    }
+
+    90% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-100px) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+.name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#cake {
+    display: block;
+    position: relative;
+    margin: -15em auto 0 auto;
+}
+
+/* ============================================== Candle
+      */
+
+.cake {
+    background: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    top: 228px;
+    left: 50%;
+    margin-left: -2.4px;
+    margin-top: -8.33333333px;
+    width: 5px;
+    height: 35px;
+    transform: translateY(-300px);
+    backface-visibility: hidden;
+    animation: in 500ms 6s ease-out forwards;
+}
+
+.cake:after,
+.cake:before {
+    background: rgba(59, 130, 246, 0.3);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2.22222222px;
+}
+
+.cake:after {
+    top: 25%;
+    left: 0;
+}
+
+.cake:before {
+    top: 45%;
+    left: 0;
+}
+
+@media (max-width: 600px) {
+  .cake {
+    transform: translateY(0) !important;
+    animation: none !important;
+  }
+}
+
+/* ============================================== Fire
+      */
+
+.fuego {
+    border-radius: 100%;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -2.6px;
+    width: 6.66666667px;
+    height: 18px;
+}
+
+.fuego:nth-child(1) {
+    animation: fuego 2s 6.5s infinite;
+}
+
+.fuego:nth-child(2) {
+    animation: fuego 1.5s 6.5s infinite;
+}
+
+.fuego:nth-child(3) {
+    animation: fuego 1s 6.5s infinite;
+}
+
+.fuego:nth-child(4) {
+    animation: fuego 0.5s 6.5s infinite;
+}
+
+.fuego:nth-child(5) {
+    animation: fuego 0.2s 6.5s infinite;
+}
+
+/* ============================================== Animation Fire
+      */
+
+@keyframes fuego {
+
+    0%,
+    100% {
+        background: radial-gradient(circle, rgba(251, 191, 36, 0.8) 0%, rgba(245, 158, 11, 0.6) 100%);
+        box-shadow: 0 0 20px 5px rgba(251, 191, 36, 0.2), 0 0 10px 2px rgba(245, 158, 11, 0.3);
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        background: radial-gradient(circle, rgba(245, 158, 11, 0.6) 0%, rgba(217, 119, 6, 0.4) 100%);
+        box-shadow: 0 0 20px 8px rgba(251, 191, 36, 0.2), 0 0 15px 4px rgba(245, 158, 11, 0.4);
+        transform: translateY(-10px) scale(0.9);
+    }
+}
+
+@keyframes in {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Professional typography and colors */
+.text {
+    color: #1D1F5A;
+    font-family: 'Lato Black', sans-serif;
+    text-align: center;
+    margin-top: 57px;
+    z-index: 2;
+    position: relative;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+.text h1 {
+    font-size: 2.7em;
+    font-weight: 800;
+    margin: 0.2em 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #2e4edc, #5d1b9f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    margin-top: 1em;
+
+}
+
+/* الاسم */
+.text p {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    color: #382A5F;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transform: scale(1);
+    }
+
+    100% {
+        text-shadow: 0 4px 8px rgba(51, 65, 85, 0.2);
+        transform: scale(1.02);
+    }
+}
+
+
+/*music*/
+.music-container {
+    background-color: #9EBAF3;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(250, 247, 247, 0.6);
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+}
+
+.img-container {
+    position: relative;
+    width: 110px;
+}
+
+.img-container::after {
+    content: '';
+    background-color: #9ebaf300;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 50%);
+}
+
+.img-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 110px;
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: rotate 3s linear infinite;
+
+    animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: #9EBAF3;
+    border: 0;
+    color: #353A5F;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.action-btn.action-btn-big {
+    color: #6155a3;
+    font-size: 30px;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.music-info {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 150px;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: 0;
+}
+
+.music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.music-info h4 {
+    margin: 0;
+}
+
+.progress-container {
+    background: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #6155a3;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;       /* يسمح بالتفاف العناصر عند ضيق العرض */
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 300px;       /* العنصر ينمو ويقفز حتى يصل إلى 300px على الأقل */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* من 0 إلى 600px (جوال) */
+@media (max-width: 600px) {
+  .navbar { flex-direction: column; }
+  h1 { font-size: 1.5rem; }
+}
+
+/* من 601 إلى 1024px (تابلت) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .sidebar { display: none; }
+}
+
+/* من 1025px وما فوق (ديسكتوب) */
+@media (min-width: 1025px) {
+  .content { max-width: 1200px; margin: 0 auto; }
+}
+
+h2 {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+}
+
