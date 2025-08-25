@@ -148,13 +148,13 @@ body {
     background: #ffffff;
     border-radius: 10px;
     position: absolute;
-    top: 228px;
+    top: -40px;
     left: 50%;
     margin-left: -2.4px;
     margin-top: -8.33333333px;
     width: 5px;
     height: 35px;
-    transform: translateY(-300px);
+    transform: translateY(-50%);
     backface-visibility: hidden;
     animation: in 500ms 6s ease-out forwards;
      z-index: 10;
@@ -181,8 +181,9 @@ body {
 
 @media (max-width: 600px) {
   .cake {
-    transform: translateY(0) !important;
-    animation: none !important;
+    top: -40px;
+    transform: translateX(-50%) translateY(0);
+    animation: none;
   }
 }
 
@@ -412,6 +413,7 @@ body {
     width: 0%;
     transition: width 0.1s linear;
 }
+
 
 
 
