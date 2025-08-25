@@ -151,7 +151,7 @@ body {
     top: 228px;
     left: 50%;
     margin-left: -2.4px;
-    margin-top: -8.33333333px;
+    margin-top: -20px;
     width: 5px;
     height: 35px;
     transform: translateY(-300px);
@@ -403,4 +403,5 @@ body {
     height: 100%;
     width: 0%;
     transition: width 0.1s linear;
+
 }
