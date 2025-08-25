@@ -135,13 +135,6 @@ body {
     font-weight: 600;
 }
 
-/* الحاوية الرئيسية للكيكة + شمعتها */
-#cake-container {
-  position: relative;
-  width: 200px;       /* نفس عرض الـSVG */
-  margin: -15em auto 0; /* حسب مكانك الحالي */
-}
-
 #cake {
     display: block;
     position: relative;
@@ -151,20 +144,19 @@ body {
 /* ============================================== Candle
       */
 
-.candle {
+.cake {
     background: #ffffff;
     border-radius: 10px;
     position: absolute;
-    top: 0px;
+    top: 228px;
     left: 50%;
     margin-left: -2.4px;
     margin-top: -8.33333333px;
     width: 5px;
     height: 35px;
-    transform: translate(-50%, -100%);
+    transform: translateY(-300px);
     backface-visibility: hidden;
     animation: in 500ms 6s ease-out forwards;
-    z-index: 10;
 }
 
 .cake:after,
@@ -186,22 +178,12 @@ body {
     left: 0;
 }
 
-/* إطارات الأنيميشن للنزول */
-@keyframes drop {
-  to {
-    transform: translate(-50%, 20px); /* 20px أسفل من أعلى الحاوية، عدّلي القيمة حسب سمك رأس الشمعة */
-  }
-}
-
-/* إلغاء الأنيميشن في الجوال وتمكين النزول مباشرة */
 @media (max-width: 600px) {
-  .candle {
-    animation: none;
-    transform: translate(-50%, 20px); /* نفس نهاية الـkeyframe */
+  .cake {
+    transform: translateY(0) !important;
+    animation: none !important;
   }
 }
-
-
 
 /* ============================================== Fire
       */
@@ -429,9 +411,6 @@ body {
     width: 0%;
     transition: width 0.1s linear;
 }
-
-
-
 
 
 
