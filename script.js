@@ -249,4 +249,3 @@ audio.addEventListener('timeupdate', DurTime);
 
 
 
-
