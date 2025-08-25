@@ -157,6 +157,7 @@ body {
     transform: translateY(-300px);
     backface-visibility: hidden;
     animation: in 500ms 6s ease-out forwards;
+    z-index: 10;
 }
 
 .cake:after,
@@ -413,6 +414,7 @@ body {
     transition: width 0.1s linear;
 
 }
+
 
 
 
