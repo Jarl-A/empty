@@ -1,23 +1,3 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const candle = document.querySelector('.candle');
-    // تأخيرة بسيطة 1 ثانية
-    setTimeout(() => candle.classList.add('drop-active'), 1000);
-  });
-</script>
-<style>
-  .candle {
-    /* الحالة الابتدائية */
-    transform: translate(-50%, -100%);
-    transition: transform 1s ease-out;
-  }
-  .drop-active {
-    transform: translate(-50%, 20px);
-  }
-
-
-
-
-
 const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
@@ -266,6 +246,7 @@ audio.addEventListener('timeupdate', DurTime);
 
     requestAnimationFrame(step);
 })();
+
 
 
 
