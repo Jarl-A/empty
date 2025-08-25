@@ -163,7 +163,7 @@ body {
     height: 35px;
     transform: translate(-50%, -100%);
     backface-visibility: hidden;
-    animation: drop 1s ease-out 1s forwards !important;
+    animation: in 500ms 6s ease-out forwards;
     z-index: 10;
 }
 
@@ -429,6 +429,7 @@ body {
     width: 0%;
     transition: width 0.1s linear;
 }
+
 
 
 
