@@ -163,8 +163,8 @@ body {
     height: 35px;
     transform: translate(-50%, -100%);
     backface-visibility: hidden;
-    animation: drop 0.5s ease-out 6s forwards;
-     z-index: 10;
+    animation: drop 1s ease-out 1s forwards !important;
+    z-index: 10;
 }
 
 .cake:after,
@@ -429,6 +429,7 @@ body {
     width: 0%;
     transition: width 0.1s linear;
 }
+
 
 
 
