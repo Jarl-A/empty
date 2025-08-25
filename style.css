@@ -178,6 +178,14 @@ body {
     left: 0;
 }
 
+@media (max-width: 600px) {
+  .cake {
+    transform: translateY(0) !important;
+    animation: none !important;
+  }
+}
+
+
 /* ============================================== Fire
       */
 
@@ -405,6 +413,7 @@ body {
     transition: width 0.1s linear;
 
 }
+
 
 
 
