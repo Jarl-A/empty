@@ -144,7 +144,7 @@ body {
 /* ============================================== Candle
       */
 
-.cake {
+.candle {
     background: #ffffff;
     border-radius: 10px;
     position: absolute;
@@ -154,7 +154,7 @@ body {
     margin-top: -8.33333333px;
     width: 5px;
     height: 35px;
-    transform: translateY(-50%);
+    transform: translateX(-50%) translateY(-300px);
     backface-visibility: hidden;
     animation: in 500ms 6s ease-out forwards;
      z-index: 10;
@@ -180,8 +180,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .cake {
-    top: -40px;
+  .candle {
     transform: translateX(-50%) translateY(0);
     animation: none;
   }
@@ -413,6 +412,7 @@ body {
     width: 0%;
     transition: width 0.1s linear;
 }
+
 
 
 
